@@ -26,4 +26,13 @@ function newConnection(socket){
     // io.sockets.emit("mouse", data); //this line sends the message to every client, even the one who send the data to the server
     console.log(data);
   }
+
+  socket.on("key", keyMessage);
+
+  function keyMessage(dataKey){
+    socket.broadcast.emit("key", dataKey);
+    // io.sockets.emit("mouse", data); //this line sends the message to every client, even the one who send the data to the server
+    console.log(dataKey);
+  }
+
 }
