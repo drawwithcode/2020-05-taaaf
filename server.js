@@ -1,15 +1,19 @@
-var express = require("express");
+let express = require("express");
 
-var app = express();
-var server = app.listen(3000);
+let app = express();
+let server = app.listen(port);
 
 app.use(express.static("public"));
 
 console.log("My socket server is running");
 
-var socket = require ("socket.io");
+let port = process.env.PORT || 3000;
 
-var io = socket(server);
+let server = app.listen(port);
+
+let socket = require ("socket.io");
+
+let io = socket(server);
 
 io.sockets.on("connection", newConnection);
 

@@ -1,4 +1,4 @@
-var socket;
+let socket;
 
 function preload(){
 
@@ -21,7 +21,7 @@ function newDrawing(data){
 function mouseDragged(){
   console.log("Sending: " + mouseX + ", " + mouseY);
 
-  var data = {
+  let data = {
     x: mouseX,
     y: mouseY
   }
