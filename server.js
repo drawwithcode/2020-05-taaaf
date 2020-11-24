@@ -17,9 +17,11 @@ let io = socket(server);
 io.sockets.on("connection", newConnection);
 
 function newConnection(socket){
-  console.log("new connection: "+ socket.id)
+  console.log("new connection: "+ socket.id);
 
   socket.on("mouse", mouseMessage);
+
+  // socket.broadcast.emit("connection", true);
 
   function mouseMessage(data){
     socket.broadcast.emit("mouse", data);
@@ -35,4 +37,13 @@ function newConnection(socket){
     console.log(dataKey);
   }
 
+
+//
+//     socket.on("timer", timerMessage);
+//
+//     function timerMessage(dataTimer){
+//       io.sockets.emit("timer", dataTimer); //this line sends the message to every client, even the one who send the data to the server
+//       console.log(dataTimer);
+//     }
+//
 }
