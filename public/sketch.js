@@ -92,9 +92,10 @@ function draw() {
   textSize(16);
   textAlign(CENTER);
   fill(255);
-  text("drag to draw in the screen of others, press a key to delete all from all screens", width / 2, 30);
+  text("drag to draw in the screen of others, press any key to delete all from all screens", width / 2, 30);
   text("try to draw something and see if someone will guess right", width / 2, 50);
   text("pencil dimensions" , 90, 60);
+  text("scroll to change" , 90, 70);
 
   // text("Timer between rounds: " + timer, width/2, 70);
 
